@@ -1,4 +1,4 @@
-package com.testus.first_android
+package com.testus.festivals
 
 data class FestivalInfo(val name: String) {
 

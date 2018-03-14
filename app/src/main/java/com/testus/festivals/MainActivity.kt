@@ -1,4 +1,4 @@
-package com.testus.first_android
+package com.testus.festivals
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
         Thread(Runnable {
             val client = OkHttpClient()
             val request = Request.Builder()
-                    .url("https://api.github.com/users/fedosovmu/repos")
+                    //.url("https://api.github.com/users/fedosovmu/repos")
+                    .url("http://androidfest.ucoz.net/data/github2.txt")
                     .build()
             val response = client.newCall(request).execute()
             val responseText = response.body()!!.string()

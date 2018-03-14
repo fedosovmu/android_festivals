@@ -1,4 +1,4 @@
-package com.testus.first_android
+package com.testus.festivals
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

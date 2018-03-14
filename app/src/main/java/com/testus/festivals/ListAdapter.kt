@@ -1,4 +1,4 @@
-package com.testus.first_android
+package com.testus.festivals
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView

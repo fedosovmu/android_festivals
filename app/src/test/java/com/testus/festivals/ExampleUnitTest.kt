@@ -1,4 +1,4 @@
-package com.testus.first_android
+package com.testus.festivals
 
 import org.junit.Test
 
