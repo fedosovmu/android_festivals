@@ -18,17 +18,17 @@ class MainActivity : AppCompatActivity() {
         Thread(Runnable {
             val client = OkHttpClient()
             val request = Request.Builder()
-                    //.url("https://api.github.com/users/fedosovmu/repos")
-                    .url("http://androidfest.ucoz.net/data/github2.txt")
+                    .url("http://androidfest.ucoz.net/data/festivals.txt")
                     .build()
             val response = client.newCall(request).execute()
             val responseText = response.body()!!.string()
+
             var festival = Gson().fromJson(responseText, FestivalInfo.List::class.java)
             runOnUiThread {
                 val adapter = ListAdapter(this, festival)
                 my_recycler_view.adapter=adapter
             }
-            android.util.Log.d("Repos", festival.joinToString { it.name })
+            android.util.Log.d("Fest", festival.joinToString { it.name })
         }).start()
 
 
