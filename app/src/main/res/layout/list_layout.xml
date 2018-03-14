@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="Festival Name"
+        android:textSize="20dp"
+        android:padding="5dp"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
