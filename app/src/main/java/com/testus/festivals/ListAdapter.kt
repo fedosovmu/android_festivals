@@ -1,6 +1,8 @@
 package com.testus.festivals
 
 import android.content.Context
+import android.content.Intent
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -28,7 +30,7 @@ class ListAdapter(var c: Context, var lists: ArrayList<FestivalInfo>) : Recycler
         fun bindData(item: FestivalInfo) {
             itemView.my_button.text = item.name
             itemView.my_button.setOnClickListener {
-                itemView.my_button.text = item.place
+                itemView.my_button.text = item.description
             }
         }
     }
