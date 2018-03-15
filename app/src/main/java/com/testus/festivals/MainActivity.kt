@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val layoutManager = LinearLayoutManager(this)
         my_recycler_view.layoutManager=layoutManager
+
+
         Thread(Runnable {
             val client = OkHttpClient()
             val request = Request.Builder()
@@ -28,9 +30,7 @@ class MainActivity : AppCompatActivity() {
                 val adapter = ListAdapter(this, festival)
                 my_recycler_view.adapter=adapter
             }
-            android.util.Log.d("Fest", festival.joinToString { it.name })
+            //android.util.Log.d("Fest", festival.joinToString { it.name })
         }).start()
-
-
     }
 }

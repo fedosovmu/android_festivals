@@ -20,12 +20,12 @@ class ListAdapter(var c: Context, var lists: ArrayList<FestivalInfo>) : Recycler
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
-        (holder as Item).bindData(lists[position].name)
+        (holder as Item).bindData(lists[position].name, lists[position].place)
     }
 
     class Item(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindData(_list: String) {
-            itemView.textView.text = _list
+        fun bindData(_list: String, _place: String) {
+            itemView.button.text = _list + " " + _place
         }
     }
 }
