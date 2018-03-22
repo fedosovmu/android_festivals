@@ -23,14 +23,18 @@ class ListAdapter(var c: Context, var lists: ArrayList<FestivalInfo>) : Recycler
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
-        (holder as Item).bindData(lists[position])
+        (holder as Item).bindData(lists[position], c)
     }
 
     class Item(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindData(item: FestivalInfo) {
+        fun bindData(item: FestivalInfo, c: Context) {
             itemView.my_button.text = item.name
+
             itemView.my_button.setOnClickListener {
-                itemView.my_button.text = item.description
+                //itemView.my_button.text = item.description
+                val intent = Intent(c, FestivalActivity::class.java)
+                intent.putExtra("ITEM_DESCRIPTION", item.description)
+                startActivity(c, intent, null)
             }
         }
     }
